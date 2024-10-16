@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+.card-media {
+    background-color: #2d3748;
+}
+.card-media.image {
+    aspect-ratio: 5/4;
+}
+.card-media.video {
+    aspect-ratio: 9/16;
+}
+.card-media img, .card-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.modal {
+    transition: opacity 0.3s ease-out;
+}
+.modal-content {
+    transition: transform 0.3s ease-out;
+}
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal.active .modal-content {
+    transform: translateY(0);
+}

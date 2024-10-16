@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add any additional custom styles here */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+#results img {
+    transition: transform 0.3s ease;
+}
+
+#results img:hover {
+    transform: scale(1.05);
+}
